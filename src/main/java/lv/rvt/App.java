@@ -8,12 +8,13 @@ public class App
     public static void main( String[] args )
     {
       Scanner scanner = new Scanner(System.in);
-
-      int start = Integer.valueOf(scanner.nextLine());
-      int end = 101;
-      for (int i = start; i < end; i++) {
-      System.out.println(i);
-    }
+      int end = Integer.valueOf(scanner.nextLine());
+      int start = 0 ;
+      for (int i = end; i > 0; i--) {
+        start=start+end ;
+      }
+      System.out.println(start);
+    
 }
 }
         
