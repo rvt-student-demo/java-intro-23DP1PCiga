@@ -7,16 +7,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
-        int input=Integer.valueOf(scanner.nextLine()) ; 
+      printUntilNumber(5);
     }
-    public static void printUntilNumber(int number ) {
-      int i=0;
-      while(i>number){
+      public static void printUntilNumber(int num){
+        for (int i = 1; i < num + 1; i++) {
         System.out.println(i);
-        i++;
       }
-    }
   }
+}
+
         
    
