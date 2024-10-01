@@ -7,11 +7,14 @@ public class App
 {
     public static void main( String[] args )
     {
-      printUntilNumber(5);
+      divisibleByThreeInRange(3, 6);
     }
-      public static void printUntilNumber(int num){
-        for (int i = 1; i < num + 1; i++) {
-        System.out.println(i);
+    int start=1;
+      public static void divisibleByThreeInRange(int start , int end){
+        for (int i = start; i < end; ) {
+          if (start%3 ==0 )
+        System.out.println(start);
+        start++;
       }
   }
 }
