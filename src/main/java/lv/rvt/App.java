@@ -11,11 +11,12 @@ public class App
     }
     int start=1;
       public static void divisibleByThreeInRange(int start , int end){
-        for (int i = start; i < end; ) {
-          if (start%3 ==0 )
+        while(start< end+1) {
+          if (start %3 ==0 ){
         System.out.println(start);
-        start++;
       }
+      start++;
+    }
   }
 }
 
