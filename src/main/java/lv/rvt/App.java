@@ -7,30 +7,15 @@ public class App
 {
     public static void main( String[] args )
     {
-      Scanner reader = new Scanner(System.in);
-      int sum = 0;
-      int sk=0;
-      int even=0;
-      int odd=0;
-      System.out.print("Write numbers : ");
-      while (true) {
-          int input = Integer.valueOf(reader.nextLine());
-      
-          if (input == -1) {
-             break;
-          }
-          sum += input;
-          sk++;
-          if (input % 2 ==0){
-            even++;
-          }
-      } 
-      System.out.println("Thx! Bye!");
-      System.out.println("Sum: " + sum );
-      System.out.println("Numbers : " + sk);
-      System.out.println("Average : " + ((double) sum/sk));
-      System.out.println("Even :" + even);
-      System.out.println("Odd : " +  (sk -even));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many times ? :");
+        int input=Integer.valueOf(scanner.nextLine()) ;
+        for (int i=0; i<input ; i++){
+          printText();
+        }
+    }
+    public static void printText() {
+      System.out.println("In a hole in the ground there lived a method");
     }
   }
         
