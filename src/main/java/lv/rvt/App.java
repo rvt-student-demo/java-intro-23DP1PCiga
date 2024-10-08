@@ -6,18 +6,15 @@ import java.util.Scanner;
 public class App 
 {
   public static void main(String[] args) {
-    printStars(5);
-    printStars(3);
-    printStars(9);
-
-    printSquare(4);
-
-    printRectangle(17, 3);
-
-    printTriangle(4);
+   
+    christmasTree(4);
+    
 }
-    public static void printStars(int number){
-      for (int i=0; i<=number ; i++){
+
+    
+//star sign
+public static void printStars(int number){
+      for (int i=0; i<number ; i++){
         System.out.print("*");
       }
       System.out.println();
@@ -49,7 +46,36 @@ public static void printTriangle(int size) {
     i++;
    }
  }
-}
 
+
+
+
+
+//Advanced astrology (3 parts)
+ public static void printSpaces(int number){
+  for (int i=0; i<=number ; i++){
+    System.out.print(" ");
+  }
+}
+ 
+public static void printTriangleTwo(int size) {
+ for(int i=0; i<=size ;i++){
+  printSpaces(size-i);
+  printStars(i);
+  
+  }
+ }
+
+ public static void christmasTree(int height){
+ for(int i=1; i<=height ;i++){
+    printSpaces(height-i);
+    printStars((i*2)-1);
+  }
+  for(int i = 0; i<2 ;i++){
+    printSpaces(height-2);
+    printStars(3);
+  }
+ }
+}
         
    
