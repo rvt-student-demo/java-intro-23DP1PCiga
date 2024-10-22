@@ -7,40 +7,27 @@ import java.util.ArrayList;
 
 public class App 
 {
-    public static void main(String[] args) {
-      Scanner scanner= new Scanner(System.in);
+public static void main(String[] args) 
+  {
+    ArrayList<Integer> numbers = new ArrayList<>();
+    numbers.add(3);
+    numbers.add(2);
+    numbers.add(6);
+    numbers.add(-1);
+    numbers.add(5);
+    numbers.add(1);
 
-        ArrayList<Integer> intList = new ArrayList<>();
+    System.out.println("The numbers in the range [0, 5]");
+    printNumbersInRange(numbers, 0, 5);
 
-        int input = Integer.valueOf(scanner.nextLine());
-        intList.add(input);
-
-        while(input!=-1){
-        input = Integer.valueOf(scanner.nextLine());
-        intList.add(input);
-      }
-
-        System.out.print("From where? ");
-        int input1 = Integer.valueOf(scanner.nextLine());
-        
-        while (input1 > intList.size()){
-          System.out.println("Kļūda");
-          int start = Integer.valueOf(scanner.nextLine());
-          input1=start;
-        } 
-        
-        System.out.print("To where? ");
-        int input2 = Integer.valueOf(scanner.nextLine());
-        
-        while (input2 > intList.size()){
-          System.out.println("Kļūda");
-          int end = Integer.valueOf(scanner.nextLine());
-          input2=end;
-        } 
-        for (int i = input1; i <=input2; i++ ){
-          System.out.println(intList.get(i));
-        }
-       
-      }
-  } 
-
+    System.out.println("The numbers in the range [3, 10]");
+    printNumbersInRange(numbers, 3, 10);
+ } 
+ public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
+  for(int i:numbers){
+    if(i>=lowerLimit && i<=upperLimit){
+      System.out.println(i);
+    }
+  }
+ }
+}
