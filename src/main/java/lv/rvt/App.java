@@ -9,25 +9,18 @@ public class App
 {
 public static void main(String[] args) 
   {
-    ArrayList<Integer> numbers = new ArrayList<>();
-    numbers.add(3);
-    numbers.add(2);
-    numbers.add(6);
-    numbers.add(-1);
-    numbers.add(5);
-    numbers.add(1);
+   int[] valA= {13,-22,82,17};
+   int[] valB= {0,  0,  0, 0};
 
-    System.out.println("The numbers in the range [0, 5]");
-    printNumbersInRange(numbers, 0, 5);
+   for(int i =0; i<valA.length;i++){
+    valB[i]=25-valA[i];
+   }
 
-    System.out.println("The numbers in the range [3, 10]");
-    printNumbersInRange(numbers, 3, 10);
- } 
- public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
-  for(int i:numbers){
-    if(i>=lowerLimit && i<=upperLimit){
-      System.out.println(i);
-    }
-  }
+   System.out.println("valA: " +valA[0]+" "+valA[1]+" "+valA[2]+" "+valA[3]);
+   
+   System.out.println("valB: " + valB[0]+" "+valB[1]+" "+valB[2]+" "+valB[3]);
+   
+   System.out.println("sum: " +(valA[0]+valB[0])+" "+(valA[1]+valB[1])+" "+(valA[2]+valB[2])+" "+(valA[3]+valB[3]));
+
  }
 }
