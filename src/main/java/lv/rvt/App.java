@@ -22,14 +22,25 @@ public class App
 
         System.out.print("From where? ");
         int input1 = Integer.valueOf(scanner.nextLine());
-
+        
+        while (input1 > intList.size()){
+          System.out.println("Kļūda");
+          int start = Integer.valueOf(scanner.nextLine());
+          input1=start;
+        } 
+        
         System.out.print("To where? ");
         int input2 = Integer.valueOf(scanner.nextLine());
-
+        
+        while (input2 > intList.size()){
+          System.out.println("Kļūda");
+          int end = Integer.valueOf(scanner.nextLine());
+          input2=end;
+        } 
         for (int i = input1; i <=input2; i++ ){
           System.out.println(intList.get(i));
         }
+       
+      }
+  } 
 
-    }
-
-}
