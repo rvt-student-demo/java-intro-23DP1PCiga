@@ -15,16 +15,21 @@ public class App
         int input = Integer.valueOf(scanner.nextLine());
         intList.add(input);
 
-        int listSum=input;
-
-        while(input!=0){
+        while(input!=-1){
         input = Integer.valueOf(scanner.nextLine());
-        listSum = listSum + input ;
         intList.add(input);
-        
+      }
+
+        System.out.print("From where? ");
+        int input1 = Integer.valueOf(scanner.nextLine());
+
+        System.out.print("To where? ");
+        int input2 = Integer.valueOf(scanner.nextLine());
+
+        for (int i = input1; i <=input2; i++ ){
+          System.out.println(intList.get(i));
         }
-        System.out.println(intList.get(0));
-        System.out.println(listSum);
-        
+
     }
+
 }
