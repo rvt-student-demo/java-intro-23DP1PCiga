@@ -9,7 +9,20 @@ public class App
 {
 public static void main(String[] args){ 
 
-  Product par1=new Product("Apple",1.1,11);
-  par1.printProduct();
+  Person per1=new Person("John");
+  per1.printPerson();
+
+  per1.growOlder();
+  per1.growOlder();
+  per1.growOlder();
+
+  per1.printPerson();
+
+  for(int i=0 ; i<35 ; i++){
+  per1.growOlder();
+  }
+  
+  per1.printPerson();
  }
 }
+  
