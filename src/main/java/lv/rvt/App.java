@@ -7,19 +7,13 @@ import java.util.ArrayList;
 
 public class App 
 {
-public static void main(String[] args){ 
+ 
+  public static void main(String[] args) {
+    Agent bond = new Agent("James", "Bond");
+    bond.toString(); // prints nothing
+    System.out.println(bond);
 
-  DecreasingCounter counter = new DecreasingCounter(100);
-  
-  counter.printValue();
-  
-  counter.reset();
-  counter.printValue();
-
-  counter.decrement();
-  counter.printValue();
-
-  
+    Agent ionic = new Agent("Ionic", "Bond");
+    System.out.println(ionic);
  }
 }
-  
