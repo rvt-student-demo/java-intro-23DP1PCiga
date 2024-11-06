@@ -2,18 +2,19 @@ package lv.rvt;
 
 public class Statistics {
     private int count;
+    private double sum;
    
     public Statistics() {
-        this.count =count;
+        
         
     }
 
     public void addNumber(int number) {
-        
-       
+        this.count++;
+      
     }
 
-    public void getCount(int kopa) {
-        
+    public int getCount() {
+        return this.count;
     }
 }
