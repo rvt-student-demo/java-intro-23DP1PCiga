@@ -13,13 +13,25 @@ public class App
   Scanner scanner = new Scanner(System.in) ;
   int num =0;
   
-  Statistics viens =new Statistics();
+  Statistics sum =new Statistics();
+  Statistics even =new Statistics();
+  Statistics odd =new Statistics();
 
   while(num !=-1){
-  viens.addNumber(num) ;
-   num = Integer.valueOf(scanner.nextLine()) ;
-   }  
-   System.out.println("Sum: "+ viens.sum());
+  sum.addNumber(num) ;
+  num = Integer.valueOf(scanner.nextLine()) ;
+  if (num % 2 == 0) {
+    even.addNumber(num);
+  } 
+  if (num % 2 == 1){
+    odd.addNumber(num);
+  }
+
+  }
+  
+   System.out.println("Sum: "+ sum.sum() );
+   System.out.println(" Sum of even numbers: " + even.sum()) ;
+   System.out.println(" Sum of odd numbers: " + odd.sum());
   }
  }
 }
