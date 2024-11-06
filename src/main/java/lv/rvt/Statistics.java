@@ -3,6 +3,7 @@ package lv.rvt;
 public class Statistics {
     private int count;
     private double sum;
+    private int num;
    
     public Statistics() {
        this.count=count;

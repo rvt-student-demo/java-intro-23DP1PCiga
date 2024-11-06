@@ -9,15 +9,17 @@ public class App
 {
  
   public class MainProgram {
-    public static void main(String[] args) {
-        Statistics statistics = new Statistics();
-        statistics.addNumber(3);
-        statistics.addNumber(5);
-        statistics.addNumber(1);
-        statistics.addNumber(2);
-        System.out.println("Count: " + statistics.getCount());
-        System.out.println("Sum: " + statistics.sum());
-        System.out.println("Average: " + statistics.average());
-    }
+  public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in) ;
+  int num =0;
+  
+  Statistics viens =new Statistics();
+
+  while(num !=-1){
+  viens.addNumber(num) ;
+   num = Integer.valueOf(scanner.nextLine()) ;
+   }  
+   System.out.println("Sum: "+ viens.sum());
+  }
  }
 }
