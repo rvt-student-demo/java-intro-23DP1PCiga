@@ -14,9 +14,13 @@ public String toString() {
   }
   
 public void eatAffordably() {
+    if(this.balance >=0){
     this.balance= this.balance -2.60;
+  }
 }
 public void eatHeartily() {
+    if(this.balance >=0){
     this.balance=this.balance-4.60;
-}
+  }
  }
+}
