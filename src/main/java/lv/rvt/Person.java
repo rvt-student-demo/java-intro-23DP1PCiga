@@ -6,11 +6,11 @@ public class Person {
     private int height;
     private int weight;
 
-    public Person(String name){
+    public Person(String name , int age, int weight ,int height){
     this.name=name;
-    this.age = 0;
-    this.height = 0;
-    this.weight = 0;
+    this.age = age;
+    this.height = height;
+    this.weight = weight;
     }
     public String toString() {
         return this.name + ", age " + this.age + " years, my body mass index is " + this.bodyMassIndex();
@@ -42,6 +42,10 @@ public void setHeight(int newHeight) {
 
 public void setWeight(int newWeight) {
     this.weight = newWeight;
+}
+
+public void setAge(int newAge){
+    this.age = newAge;
 }
 public double bodyMassIndex() {
     double heigthPerHundred = this.height / 100.0;

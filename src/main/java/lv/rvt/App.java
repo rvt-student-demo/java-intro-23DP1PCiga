@@ -9,11 +9,28 @@ public class App
 {
  
 public static void main(String[] args) throws Exception {
- BufferedReader reader = Utils.getReader("data.csv");
+ BufferedReader reader = Utils.getReader("persons.csv");
+
+ArrayList<Person> persons= new ArrayList<>();
 
 String line;
-while((line =reader.readLine()) !=null){
-   System.out.println(line);
+
+reader.readLine();
+while ((line = reader.readLine())!= null){
+String[] parts = line.split(", ");
+Person pers1 = new Person (
+      parts[0], 
+      Integer.valueOf(parts[1]),
+      Integer.valueOf(parts[2]),
+      Integer.valueOf(parts[3])
+      );
+      persons.add(pers1);
    }
+
+  for (Person person: persons) {
+    System.out.println(person);
   }
  }
+}  
+
+
