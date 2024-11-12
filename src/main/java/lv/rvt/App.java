@@ -10,16 +10,28 @@ public class App
  
   public class MainProgram {
   public static void main(String[] args) {
-    PaymentCard card = new PaymentCard(50);
-    System.out.println(card);
-    card.addMoney(15);
-    System.out.println(card);
+  PaymentCard cardPaul = new PaymentCard(20);
+  PaymentCard cardMatt = new PaymentCard(30);
+  cardPaul.eatHeartily();
+  cardMatt.eatAffordably();
 
-    card.addMoney(10);
-    System.out.println(card);
+  System.out.println("Paul: "+ cardPaul);
+  System.out.println("Matt: "+ cardMatt);
 
-    card.addMoney(200);
-    System.out.println(card);
+  cardPaul.addMoney(20);
+  cardMatt.eatHeartily();
+
+  System.out.println("Paul: "+ cardPaul);
+  System.out.println("Matt: "+ cardMatt);
+
+  cardPaul.eatAffordably();
+  cardPaul.eatAffordably();
+
+  cardMatt.addMoney(50);
+
+  System.out.println("Paul: "+ cardPaul);
+  System.out.println("Matt: "+ cardMatt);
+
   }
  }
 }
