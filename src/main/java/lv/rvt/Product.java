@@ -30,7 +30,7 @@ public class Product {
     } 
     @Override
     public String toString(){
-        return this.name + "(" + this.weight+ "kg"+")" + " can be found from the " + this.location;
+        return this.name + "(" + this.weight+ "kg"+")" + " can be found from the    " + this.location;
     }
 
 }

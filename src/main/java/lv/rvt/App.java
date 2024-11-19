@@ -9,13 +9,20 @@ public class App
 {
  
 public static void main(String[] args) throws Exception {
-  Product tapeMeasure = new Product("Tape measure");
-  Product plaster = new Product("Plaster", "home improvement section");
-  Product tyre = new Product("Tyre", 5);
-  
-  System.out.println(tapeMeasure);
-  System.out.println(plaster);
-  System.out.println(tyre);
+  DecreasingCounter counter= new DecreasingCounter(10);
+  DecreasingCounter counter1= new DecreasingCounter();
+
+  counter.decrement();
+  counter.increase();
+  counter.increase();
+
+  counter1.decrement();
+  counter1.decrement();
+  counter1.increase();
+
+  counter.printValue();
+  counter1.printValue();
+
   }
 }
 

@@ -13,53 +13,55 @@ public class Person {
     this.weight = weight;
     }
 
-public Person(String name){
-    this(name,0,0,0 );
-}
+    public Person(String name){
+        this(name,0,0,0 );
+    }
 
-
-}
-@Override
+    @Override
     public String toString() {
         return this.name + ", age " + this.age + " years, my body mass index is " + this.bodyMassIndex();
- }
- public double maximumHeartRate(){
-    return 206.3 - (0.711 * this.age);
- }
- 
-public void growOlder() {
-    if (this.age < 30) {
-        this.age = this.age + 1;
     }
-}
-public int returnAge(){
-    return this.age;
-}
+    public double maximumHeartRate(){
+        return 206.3 - (0.711 * this.age);
+    }
+    
+    public void growOlder() {
+    this.age = this.age + 1;
+    }   
 
-public boolean isOfLegalAge() {
-    return this.age >=18;
-}
+    public void growOlder(int years){
+        this.age = this.age + years;   
+    }
+    }
+    public int returnAge(){
+        return this.age;
+    }
 
-public String getName(){
-    return this.name;
-}
+    public boolean isOfLegalAge() {
+        return this.age >=18;
+    }
 
-public void setName(String name){
-    this.name = name;
-}
-public void setHeight(int newHeight) {
-    this.height = newHeight;
-}
+    public String getName(){
+        return this.name;
+    }
 
-public void setWeight(int newWeight) {
-    this.weight = newWeight;
-}
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setHeight(int newHeight) {
+        this.height = newHeight;
+    }
 
-public void setAge(int newAge){
-    this.age = newAge;
-}
-public double bodyMassIndex() {
-    double heigthPerHundred = this.height / 100.0;
-    return this.weight / (heigthPerHundred * heigthPerHundred);
-}
+    public void setWeight(int newWeight) {
+        this.weight = newWeight;
+    }
 
+    public void setAge(int newAge){
+        this.age = newAge;
+    }
+    public double bodyMassIndex() {
+        double heigthPerHundred = this.height / 100.0;
+        return this.weight / (heigthPerHundred * heigthPerHundred);
+    }
+
+}
