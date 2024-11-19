@@ -9,12 +9,18 @@ public class App
 {
  
 public static void main(String[] args) throws Exception {
-  Clock clock = new Clock();
+  Timer timer = new Timer();
 
-while (true) {
-    System.out.println(clock);
-    clock.advance();
-}
-}
+  while (true) {
+      System.out.println(timer);
+      timer.advance();
+  
+      try {
+          Thread.sleep(10);
+      } catch (Exception e) {
+  
+      }
+    }
+  }
 }
 
