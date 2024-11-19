@@ -12,8 +12,19 @@ public class Person {
     this.height = height;
     this.weight = weight;
     }
+
+public Person(String name){
+    this(name,0,0,0 );
+}
+
+
+}
+@Override
     public String toString() {
         return this.name + ", age " + this.age + " years, my body mass index is " + this.bodyMassIndex();
+ }
+ public double maximumHeartRate(){
+    return 206.3 - (0.711 * this.age);
  }
  
 public void growOlder() {
@@ -52,4 +63,3 @@ public double bodyMassIndex() {
     return this.weight / (heigthPerHundred * heigthPerHundred);
 }
 
-}
