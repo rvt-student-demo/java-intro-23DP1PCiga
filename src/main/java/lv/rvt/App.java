@@ -9,28 +9,12 @@ public class App
 {
  
 public static void main(String[] args) throws Exception {
- BufferedReader reader = Utils.getReader("persons.csv");
+  Clock clock = new Clock();
 
-ArrayList<Person> persons= new ArrayList<>();
-
-String line;
-
-reader.readLine();
-while ((line = reader.readLine())!= null){
-String[] parts = line.split(", ");
-Person pers1 = new Person (
-      parts[0], 
-      Integer.valueOf(parts[1]),
-      Integer.valueOf(parts[2]),
-      Integer.valueOf(parts[3])
-      );
-      persons.add(pers1);
-   }
-
-  for (Person person: persons) {
-    System.out.println(person);
-  }
- }
-}  
-
+while (true) {
+    System.out.println(clock);
+    clock.advance();
+}
+}
+}
 
