@@ -19,7 +19,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return this.name + ", age " + this.age + " years, my body mass index is " + this.bodyMassIndex();
+        return this.name + ", age " + this.age + " , weight " + this.weight + ", height" + this.height;
     }
     public double maximumHeartRate(){
         return 206.3 - (0.711 * this.age);

@@ -7,22 +7,15 @@ import java.util.ArrayList;
 
 public class App 
 {
- 
-public static void main(String[] args) throws Exception {
-  DecreasingCounter counter= new DecreasingCounter(10);
-  DecreasingCounter counter1= new DecreasingCounter();
+ public static void main(String[] args) throws Exception{
 
-  counter.decrement();
-  counter.increase();
-  counter.increase();
-
-  counter1.decrement();
-  counter1.decrement();
-  counter1.increase();
-
-  counter.printValue();
-  counter1.printValue();
-
+     ArrayList<Person> persons = PersonManager.getPersonList();
+     for (Person person : persons){
+      System.out.println(person);
+     }   
   }
-}
+
+ }
+
+
 
