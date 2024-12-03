@@ -3,10 +3,10 @@ package lv.rvt;
 public class Person {
     private String name;
     private int age;
-    private int height;
-    private int weight;
+    private double height;
+    private double weight;
 
-    public Person(String name , int age, int weight ,int height){
+    public Person(String name , int age, double weight ,double height){
     this.name=name;
     this.age = age;
     this.height = height;
