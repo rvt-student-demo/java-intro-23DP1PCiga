@@ -44,6 +44,18 @@ public class Person {
     public String getName(){
         return this.name;
     }
+    public int getAge(){
+        return this.age;
+    }
+
+    public double getWeight(){
+        return this.weight;
+    }  
+
+    public double getHeight(){
+        return this.height;
+    }
+
 
     public void setName(String name){
         this.name = name;
