@@ -64,7 +64,7 @@ public class Person {
         this.height = newHeight;
     }
 
-    public void setWeight(int newWeight) {
+    public void setWeight(double newWeight) {
         this.weight = newWeight;
     }
 
