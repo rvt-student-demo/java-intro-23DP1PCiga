@@ -16,6 +16,10 @@ public class PaymentTerminal {
     double eatingAffordably = 2.50;
     double change;
 
+    public void addMoneyToCard(PaymentCard card, double sum) {
+        card.addMoney(sum);
+    }
+   
     public double eatAffordably(double payment){
         if (eatingAffordably <= payment){
             this.money += payment - eatingAffordably;
