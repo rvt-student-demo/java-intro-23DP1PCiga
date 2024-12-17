@@ -41,4 +41,27 @@ public class PaymentTerminal {
     public String toString() {
         return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
     }
+    public boolean eatAffordably(PaymentCard card) {
+        if (card.balance() - 2.50 > 0){
+            return false;
+        }
+        else {
+            heartyMeals++;
+            this.money += 2.5;
+            return true;
+        }
+       
+    }
+    
+
+    public boolean eatHeartily(PaymentCard card) {
+        if (card.balance() - 4.30 > 0){
+            return false;
+        }
+        else {
+            heartyMeals++;
+            this.money +=4.3;
+            return true;
+        }
+    }
 }

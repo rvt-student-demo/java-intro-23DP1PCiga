@@ -5,6 +5,8 @@ public class Person {
     private int age;
     private double height;
     private double weight;
+    private SimpleDate birthday;
+    
 
     public Person(String name ,int age, double height, double weight ){
     this.name=name;
@@ -12,7 +14,10 @@ public class Person {
     this.height = height;
     this.weight = weight;
     }
-
+    public Person(String name, SimpleDate date) {
+        this.name = name;
+        this.birthday = date;
+    }
     public Person(String name){
         this(name,0,0,0 );
     }
