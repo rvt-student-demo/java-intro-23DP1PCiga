@@ -8,13 +8,17 @@ import java.util.ArrayList;
 
 public class App {
 public static void main(String[] args) {
-    Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-    Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-    Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+    Box box = new  Box( 2.5, 5.0, 6.0 ) ;
+    Box box2 = new Box(box);
+    System.out.println("Area: "+ box.area() + " volume: "+box.volume());
+    System.out.println( "length: " + box.length() + " height: " + box. height() +" width:  " + box.width() )  ;
+
+    System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+    System.out.println( "topArea: "  + box.top() );
     
-    System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
-    System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));    
-    
+   Box box3 = new Box(box.biggerBox(box));
+   System.out.print("big box " + "width: "+ box3.width() + ", height " + box3.height() + ", lenght: " + box3.length() );
+
 }
 }
 

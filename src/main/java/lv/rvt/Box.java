@@ -1,0 +1,68 @@
+package lv.rvt;
+
+public class Box {
+private double width;
+private double height;
+private double length;
+
+
+public Box (double width, double height, double length){
+    this.height = height;
+    this.width = width;
+    this.length = length;
+
+}
+public Box ( double side ){
+    this.width = side;
+    this.height = side;
+    this.length = side;
+}
+public double volume(){
+    return this.width * this.height * this.length;
+}
+public double area(){
+return 2 * faceArea() + 2 * topArea() + 2 * sideArea() ;                    
+}
+public double width(){
+    return this.width;
+}
+public double height(){
+    return this.height;
+}
+public double length(){
+    return this.length;
+}
+
+//2.dala
+private double faceArea(){
+    return this.width * this.height;
+}
+private double topArea(){
+    return this.length* this.width;
+}
+private double sideArea(){
+    return this.length * this.height;
+}
+public double face(){
+    return faceArea();
+}
+public double top(){
+    return topArea();
+}
+public double side(){
+    return sideArea();
+}
+
+//3.dala
+public Box( Box oldBox ){
+    this.height = oldBox.height;
+    this.width = oldBox.width;
+    this.length = oldBox.length;  
+}
+
+//4.dala
+public Box biggerBox( Box oldBox ){
+    return new Box( 1.25*oldBox.width() , 1.25*oldBox.height() , 1.25*oldBox.length());
+}
+
+}
