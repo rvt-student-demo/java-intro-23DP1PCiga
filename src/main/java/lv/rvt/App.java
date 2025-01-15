@@ -19,6 +19,11 @@ public static void main(String[] args) {
    Box box3 = new Box(box.biggerBox(box));
    System.out.print("big box " + "width: "+ box3.width() + ", height " + box3.height() + ", lenght: " + box3.length() );
 
+   Box box4 = new Box(box.smallerBox(box));
+   System.out.print("small box " + "width: "+ box3.width() + ", height " + box3.height() + ", lenght: " + box3.length() );
+
+   System.out.println(box4.nests(box));
+
 }
 }
 
