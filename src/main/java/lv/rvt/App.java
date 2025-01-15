@@ -17,10 +17,10 @@ public static void main(String[] args) {
     System.out.println( "topArea: "  + box.top() );
     
    Box box3 = new Box(box.biggerBox(box));
-   System.out.print("big box " + "width: "+ box3.width() + ", height " + box3.height() + ", lenght: " + box3.length() );
+   System.out.println("big box " + "width: "+ box3.width() + ", height " + box3.height() + ", lenght: " + box3.length() );
 
    Box box4 = new Box(box.smallerBox(box));
-   System.out.print("small box " + "width: "+ box3.width() + ", height " + box3.height() + ", lenght: " + box3.length() );
+   System.out.println("small box " + "width: "+ box4.width() + ", height " + box4.height() + ", lenght: " + box4.length() );
 
    System.out.println(box4.nests(box));
 
