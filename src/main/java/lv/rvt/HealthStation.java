@@ -1,5 +1,7 @@
 package lv.rvt;
 
+import lv.rvt.seondsem.Person;
+
 public class HealthStation {
     int kopa;
     public double weigh(Person person) {

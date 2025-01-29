@@ -1,4 +1,6 @@
-package lv.rvt;
+package lv.rvt.seondsem;
+
+import lv.rvt.SimpleDate;
 
 public class Person {
     private String name;
@@ -6,25 +8,24 @@ public class Person {
     private double height;
     private double weight;
     private SimpleDate birthday;
+    private String address;
     
 
-    public Person(String name ,int age, double height, double weight ){
+    public Person(String name ,int age, double height, double weight , String addres ){
     this.name=name;
     this.age = age;
     this.height = height;
     this.weight = weight;
+    this.address = addres;
     }
-    public Person(String name, SimpleDate date) {
-        this.name = name;
-        this.birthday = date;
+    public Person(String name, String address) {
+        this (name , 0 , 0, 0,address);
     }
-    public Person(String name){
-        this(name,0,0,0 );
-    }
+   
 
     @Override
     public String toString() {
-        return this.name + ", age " + this.age + " , weight " + this.weight + ", height" + this.height;
+        return this.name + ", " + "\n\t" + ", " + this.address ;
     }
     public double maximumHeartRate(){
         return 206.3 - (0.711 * this.age);
@@ -81,7 +82,5 @@ public class Person {
         return this.weight / (heigthPerHundred * heigthPerHundred);
     }
 
-   public String toCsvRow(){
-    return this.name + ", " + this.age + ", " + this.height + ", " + this.weight ;
-   }
+  
 }
