@@ -1,8 +1,16 @@
 package lv.rvt.seondsem;
 
 public class Student extends Person {
-    public Student (String name , String addresse){
+    private  int credits;
+    
+    public Student (String name , String addresse ){
         super(name , addresse);
     }
-
+    public  int Study(){
+        credits++;
+        return credits ; 
+    }
+    public int Credit(){
+        return credits;
+    }
 }
