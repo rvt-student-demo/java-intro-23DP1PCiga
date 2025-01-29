@@ -14,12 +14,10 @@ import java.util.ArrayList;
 
 public class App {
 public static void main(String[] args) {
-
    Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
    System.out.println(ollie);
-   System.out.println("Study credits " + ollie.Credit());
    ollie.Study();
-   System.out.println("Study credits "+ ollie.Credit());
+   System.out.println(ollie);
 }
 }
 

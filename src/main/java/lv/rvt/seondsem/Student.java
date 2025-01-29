@@ -13,4 +13,7 @@ public class Student extends Person {
     public int Credit(){
         return credits;
     }
+public String toString(){
+    return super.toString() + "\n\t" +"Stusy creduts: "+ this.credits;
+}
 }
