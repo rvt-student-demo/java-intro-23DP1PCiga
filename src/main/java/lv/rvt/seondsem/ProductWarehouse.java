@@ -12,4 +12,9 @@ public ProductWarehouse(String productName, double capacity){
 public String getName(){
     return this.productName;
 }
-}
+
+@Override
+public String toString() {
+    // TODO Auto-generated method stub
+    return super.toString();
+}}
