@@ -7,6 +7,7 @@ import java.security.cert.PolicyQualifierInfo;
 import java.util.Scanner;
 
 import lv.rvt.seondsem.Person;
+import lv.rvt.seondsem.ProductWarehouse;
 import lv.rvt.seondsem.Student;
 import lv.rvt.seondsem.Teacher;
 
@@ -14,10 +15,11 @@ import java.util.ArrayList;
 
 public class App {
 public static void main(String[] args) {
-   Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
-   System.out.println(ollie);
-   ollie.Study();
-   System.out.println(ollie);
+ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
+juice.addToWarehouse(1000.0);
+juice.takeFromWarehouse(11.3);
+System.out.println(juice.getName()); // Juice
+System.out.println(juice); 
 }
 }
 
