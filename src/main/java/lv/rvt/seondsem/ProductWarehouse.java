@@ -1,7 +1,8 @@
 package lv.rvt.seondsem;
 
 public class ProductWarehouse extends Warehouse {
-private String productName;
+protected String productName;
+public String minValue;
 
 
 public ProductWarehouse(String productName, double capacity){
@@ -17,4 +18,14 @@ public String getName(){
 public String toString() {
     // TODO Auto-generated method stub
     return super.toString();
+}
+
+public String maxValue() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'maxValue'");
+}
+
+public String average() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'average'");
 }}
