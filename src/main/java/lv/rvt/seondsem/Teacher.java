@@ -1,7 +1,7 @@
 package lv.rvt.seondsem;
 
 public class Teacher extends Person {
-    private integer salary;
+    private int salary;
     public Teacher (String name , String address , int salary){
         super(name , address);
         this.salary = salary;

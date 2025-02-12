@@ -6,6 +6,7 @@ import java.nio.file.StandardOpenOption;
 import java.security.cert.PolicyQualifierInfo;
 import java.util.Scanner;
 
+import lv.rvt.seondsem.Book;
 import lv.rvt.seondsem.Person;
 import lv.rvt.seondsem.ProductWarehouse;
 import lv.rvt.seondsem.ProductWarehouseWithHistory;
@@ -16,18 +17,20 @@ import java.util.ArrayList;
 
 public class App {
 public static void main(String[] args) {
-// the usual:
-ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
-juice.takeFromWarehouse(11.3);
-System.out.println(juice.getName()); // Juice
-juice.addToWarehouse(1.0);
-System.out.println(juice);           // Juice: balance = 989.7, space left 10.3
+ Book book1 = new Book("Fyodor Dostoevsky", "Crime and Punishment", 2);
+    Book book2 = new Book("Robert Martin", "Clean Code", 1);
+    Book book3 = new Book("Kent Beck", "Test Driven Development", 0.5);
 
-// etc
+    CD cd1 = new CD("Pink Floyd", "Dark Side of the Moon", 1973);
+    CD cd2 = new CD("Wigwam", "Nuclear Nightclub", 1975);
+    CD cd3 = new CD("Rendezvous Park", "Closer to Being Here", 2012);
 
-// however, history() still doesn't work properly:
-System.out.println(juice.history()); // [1000.0]
-// so we only get the initial state of the history set by the constructor...
+    System.out.println(book1);
+    System.out.println(book2);
+    System.out.println(book3);
+    System.out.println(cd1);
+    System.out.println(cd2);
+    System.out.println(cd3);
 }
 }
 
