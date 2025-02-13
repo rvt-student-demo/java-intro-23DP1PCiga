@@ -7,6 +7,7 @@ import java.security.cert.PolicyQualifierInfo;
 import java.util.Scanner;
 
 import lv.rvt.seondsem.Book;
+import lv.rvt.seondsem.CD;
 import lv.rvt.seondsem.Person;
 import lv.rvt.seondsem.ProductWarehouse;
 import lv.rvt.seondsem.ProductWarehouseWithHistory;
