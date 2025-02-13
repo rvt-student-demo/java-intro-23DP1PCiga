@@ -13,12 +13,16 @@ public Box(double compacity){
 
 @Override
 public double weight() {
-    return this.weight();
+    double weight = 0;
+    for (Packatables packatables : weighttable) {
+        weight += packatables.weight();
+    }
+    return weight;
 }
-public void add (Packatable weighttable){
+public void add (Packatables weighttable){
     double currentWeight = weight();
     if(this.compacity > currentWeight + weighttable.weight()){
-        this.weighttable.add((Packatables) weighttable);
+        this.weighttable.add(weighttable);
     }
 
 }
