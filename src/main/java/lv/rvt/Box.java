@@ -1,5 +1,8 @@
 package lv.rvt;
 
+import lv.rvt.seondsem.Book;
+import lv.rvt.seondsem.CD;
+
 public class Box {
 private double width;
 private double height;
@@ -76,5 +79,13 @@ public boolean nests( Box outsideBox){
             return true;
         }
     return false;
+}
+public void add(Book book) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'add'");
+}
+public void add(CD cd) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'add'");
 }
 }
