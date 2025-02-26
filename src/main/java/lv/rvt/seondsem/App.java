@@ -1,25 +1,16 @@
 package lv.rvt.seondsem;
 
-
-  
+import lv.rvt.Money;
 
 public class App {
     public static void main(String[] args) {
-        MoneyTest a = new MoneyTest(10,0);
-        MoneyTest b = new MoneyTest(5,0);
-        
-        MoneyTest c = a.plus(b);
-        
-        System.out.println(a);  // 10.00e
-        System.out.println(b);  // 5.00e
-        System.out.println(c);  // 15.00e
-        
-        a = a.plus(c);          // NB: a new Money object is created, and is placed "at the end of the strand connected to a"
-        //  the old 10 euros at the end of the strand disappears and the Java garbage collector takes care of it
-        
-        System.out.println(a);  // 25.00e
-        System.out.println(b);  // 5.00e
-        System.out.println(c);  // 15.00e
+    
+        Money a = new Money(10, 0);
+        Money b = new Money(3, 5);
+        Money c = new Money(3, 0);
+
+        System.out.println(a.lessThan(b));  // false
+        System.out.println(b.lessThan(c));  // true
     }
 }
 

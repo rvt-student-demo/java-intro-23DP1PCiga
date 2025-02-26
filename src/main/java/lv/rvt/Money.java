@@ -1,10 +1,10 @@
-package lv.rvt.seondsem;
+package lv.rvt;
 
-public class MoneyTest {
+public class Money {
     private final int euros;
         private final int cents;
     
-        public MoneyTest(int euros, int cents) {
+        public Money(int euros, int cents) {
             this.euros = euros;
             this.cents = cents;
         }
@@ -27,9 +27,21 @@ public class MoneyTest {
      }
     
      // money plus
-     public MoneyTest plus(MoneyTest addition) {
-        MoneyTest newMoney = new MoneyTest(addition.euros + this.euros , addition.cents+this.cents); // create a new Money object that has the correct worth
+     public Money plus(Money addition) {
+        Money newMoney = new Money(addition.euros + this.euros , addition.cents+this.cents); // create a new Money object that has the correct worth
 
         return newMoney;
+    }
+
+    public boolean lessThan(Money compared){
+    if (this.euros > compared.euros){
+        if(this.cents == 99){
+            return false;
+        }
+       return false;
+      }else{
+        return true;
+      }
+         
     }
 }
